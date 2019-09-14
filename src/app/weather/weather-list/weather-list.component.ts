@@ -11,7 +11,7 @@ import { WeatherService } from '../weather.service';
 export class WeatherListComponent implements OnInit {
   @Input('WeatherForecastList') weathers: any;
   errorMessage: string;
-  selectedItem: String = 'nothing';
+  selectedItem: String = '';
 
   constructor() {
   }
