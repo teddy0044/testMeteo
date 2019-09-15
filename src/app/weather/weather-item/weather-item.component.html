@@ -1,9 +1,9 @@
 <article>
-    <div>
+    <div id="boxPrev" style="display: inline-block;">
         <h2 style="text-transform: uppercase;"> {{ weather.weather[0].main }}</h2>
         <h3 (click)="selectedWeatherItem($event)"> {{ weather.weather[0].description  | uppercase }}</h3>
         <p>Vitesse du vent (mètre/sec): {{ weather.wind.speed }}</p>
-        <span class="temperature">Température (celsius): {{ weather.main.temp }} </span> <br>
+        <span class="temperature">Température (celsius): {{ ( weather.main.temp | temperatureConverter:'C' ) }} </span> <br>
         <span class="temperature">Température (Fahrenheit): {{ ( weather.main.temp | temperatureConverter:'F') }}
         </span>
         <p>{{ weather.dt_txt | date:'medium' }}</p>

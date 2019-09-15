@@ -8,7 +8,5 @@
         <button class="btn btn-primary" [disabled]="disabledForecastButton" (click)="onSubmitDatabinding()"
             type="submit">Chercher</button>
     </form>
-    <div id="boxPrev" style="display: inline-block;">
-        <weather-list [WeatherForecastList]="weatherForecastData"></weather-list>
-    </div>
+    <weather-list [WeatherForecastList]="weatherForecastData"></weather-list>
 </section>
